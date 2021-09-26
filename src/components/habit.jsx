@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-
+// No State: App 과 연결된 것은 Habits 이기 때문에, 여기에서 State 를 가지고 있을 필요는 없다.
+// 이 Habit 이라는 컴포넌트는, App.jsx 과 연결된 Habits.jsx에서, 보여지는 도구의 역할로만 쓰이는 sub 인 컴포넌트. 
 class Habit extends Component {
 
 
     handleIncrement = () => {
-        //this.setState({ count: this.state.count + 1});
+        //this.setState({ count: this.state.count + 1}); 
     };
 
     handledDecrement = () => {
@@ -18,9 +19,10 @@ class Habit extends Component {
 
 
     render() {
-        //console.log(this.props.habit);
-        //const habitName = this.props.habit.name; // rather than this, we use other trick
-        const {name, count} = this.props.habit; //즉, 자동으로 여기 안의 데이터가 name 과 count 데이터들이 여기로 옵니다.
+        // Object Destructing 이용
+        // const habitName = this.props.habit.name;
+        // const habitCount = this.props.habit.count;
+        const {name, count} = this.props.habit; 
         //이제 대신 html 에서는 {habitName} 이 아니라 , name, count 를 써야지  
         
         return (
