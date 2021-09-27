@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 // No State: App 과 연결된 것은 Habits 이기 때문에, 여기에서 State 를 가지고 있을 필요는 없다.
 // 이 Habit 이라는 컴포넌트는, App.jsx 과 연결된 Habits.jsx에서, 보여지는 도구의 역할로만 쓰이는 sub 인 컴포넌트. 
 class Habit extends Component {
-
-
     handleIncrement = () => {
         this.props.onIncrement(this.props.habit);
     };
@@ -12,9 +10,8 @@ class Habit extends Component {
         this.props.onDecrement(this.props.habit);
     };
 
-    handledDelete = () => {
+    handleDelete = () => {
         this.props.onDelete(this.props.habit);
-
     };
 
 
@@ -35,7 +32,7 @@ class Habit extends Component {
             <button className="habit-button habit-decrease" onClick={this.handledDecrement}>
             <i className="fas fa-minus-square"></i>
             </button>
-            <button className="habit-button habit-delete" onClick={this.handledDelete}>
+            <button className="habit-button habit-delete" onClick={this.handleDelete}>
                 <i className="fas fa-trash"></i>
             </button>
             </li>
