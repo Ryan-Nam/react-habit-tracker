@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class HabitAddForm extends Component {
+class HabitAddForm extends PureComponent {
   formRef = React.createRef(); // .createRef = DOM에 접근하는 것
   inputRef = React.createRef(); // ex) same with the document.querySelector('');
 

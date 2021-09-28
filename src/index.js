@@ -12,6 +12,7 @@ import '@fortawesome/fontawesome-free/js/all.js';
 
 
 ReactDOM.render(
+  // will show console twice. so do not need to worry
   <React.StrictMode> 
     <App />
   </React.StrictMode>,
