@@ -2,6 +2,20 @@ import React, { PureComponent } from 'react';
 // No State: App 과 연결된 것은 Habits 이기 때문에, 여기에서 State 를 가지고 있을 필요는 없다.
 // 이 Habit 이라는 컴포넌트는, App.jsx 과 연결된 Habits.jsx에서, 보여지는 도구의 역할로만 쓰이는 sub 인 컴포넌트. 
 class Habit extends PureComponent {
+
+    // Lifecycle
+    componentDidMount() {
+        console.log(`habit: ${this.props.habit.name} mounted`);
+    }
+
+    componentWillUnmount() {
+        console.log(`habit: ${this.props.habit.name} will mounted`);
+
+    }
+
+
+
+
     handleIncrement = () => {
         this.props.onIncrement(this.props.habit);
     };
